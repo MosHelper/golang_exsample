@@ -1,8 +1,8 @@
 package main
 
 import (
-	"github.com/kataras/iris/_examples/tutorial/vuejs-todo-mvc/src/todo"
-	"github.com/kataras/iris/_examples/tutorial/vuejs-todo-mvc/src/web/controllers"
+	"github.com/MosHelper/golang_exsample/todo"
+	"github.com/MosHelper/golang_exsample/web/controllers"
 
 	"github.com/kataras/iris"
 	"github.com/kataras/iris/sessions"
