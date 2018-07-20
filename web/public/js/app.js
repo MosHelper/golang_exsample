@@ -1,7 +1,7 @@
 // Full spec-compliant TodoMVC with Iris
 // and hash-based routing in ~200 effective lines of JavaScript.
 
-var socket = new Ws("ws://localhost:8080/todos/sync");
+var socket = new Ws("ws://80.211.147.114:8080/todos/sync");
 
 socket.On("saved", function () {
   // console.log("receive: on saved");
