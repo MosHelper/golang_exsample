@@ -3,8 +3,6 @@ package controllers
 import (
 	"github.com/MosHelper/golang_exsample/todo"
 
-	"github.com/kataras/iris"
-	"github.com/kataras/iris/mvc"
 	"github.com/kataras/iris/sessions"
 	"github.com/kataras/iris/websocket"
 )
@@ -14,19 +12,6 @@ type TodoController struct {
 	Service todo.Service
 
 	Session *sessions.Session
-}
-
-// BeforeActivation called once before the server ran, and before
-// the routes and dependencies binded.
-// You can bind custom things to the controller, add new methods, add middleware,
-// add dependencies to the struct or the method(s) and more.
-func (c *TodoController) BeforeActivation(b mvc.BeforeActivation) {
-	// this could be binded to a controller's function input argument
-	// if any, or struct field if any:
-	b.Dependencies().Add(func(ctx iris.Context) (items []todo.Item) {
-		ctx.ReadJSON(&items)
-		return
-	})
 }
 
 // Get handles the GET: /todos route.
