@@ -12,7 +12,7 @@ node {
         /* This builds the actual image; synonymous to
          * docker build on the command line */
         sh 'cd ./web/'
-        app = docker.build("deary4/todo")
+        app = docker.build("deary4/todo", "./web/")
     }
 
     stage('Test image') {
