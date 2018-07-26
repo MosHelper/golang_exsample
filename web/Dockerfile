@@ -1,4 +1,4 @@
-FROM golang:1.8-onbuild
+FROM golang:onbuild
 WORKDIR /go/src/github.com/MosHelper/golang_exsample
 COPY . .
 RUN go get github.com/kataras/iris
