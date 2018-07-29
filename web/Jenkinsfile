@@ -38,6 +38,9 @@ node {
         // sshagent(['workshop-test']){
         //     sh 'ssh -o StrictHostKeyChecking=no root@80.211.147.114 docker ps'
         // }
+          sshagent (credentials: ['deploy-dev']) {
+                sh 'ssh -o StrictHostKeyChecking=no -l docker ps'
+            }
     }
 
 }
