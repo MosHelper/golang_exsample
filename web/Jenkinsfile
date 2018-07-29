@@ -39,7 +39,9 @@ node {
         //     sh 'ssh -o StrictHostKeyChecking=no root@80.211.147.114 docker ps'
         // }
           sshagent (credentials: ['deploy-dev']) {
-                sh 'ssh -o StrictHostKeyChecking=no root@80.211.147.114 uname -a'
+                sh 'echo SSH_AUTH_SOCK=$SSH_AUTH_SOCK'
+                sh 'ls -al $SSH_AUTH_SOCK || true'
+                sh 'ssh -vvv -o StrictHostKeyChecking=no root@80.211.147.114 uname -a'
             }
     }
 
