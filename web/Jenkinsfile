@@ -34,6 +34,9 @@ node {
         }
     }
 
+    stage('ps'){
+        sh 'docker ps'
+    }
     // stage('Deploy'){
     //     // sshagent(['workshop-test']){
     //     //     sh 'ssh -o StrictHostKeyChecking=no root@80.211.147.114 docker ps'
